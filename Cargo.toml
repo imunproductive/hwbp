@@ -2,6 +2,28 @@
 name = "hwbp"
 version = "0.1.0"
 edition = "2021"
+authors = ["Yurii Antoniuk <imunproductive@gmail.com>"]
+license = "Unlicense"
+description = "A fully-featured Rust library for managing hardware breakpoints on Windows via x86 debug registers."
+homepage = "https://github.com/imunproductive/hwbp"
+repository = "https://github.com/imunproductive/hwbp"
+keywords = [
+    "hwbp",
+    "hardware",
+    "breakpoint",
+    "debug",
+    "windows",
+    "winapi",
+    "x86",
+]
+categories = [
+    "development-tools::debugging",
+    "hardware-support",
+    "os::windows-apis",
+    "api-bindings",
+    "memory-management",
+]
+readme = "README.md"
 
 [dependencies]
 bitfield-struct = "0.9.5"
