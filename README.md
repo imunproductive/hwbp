@@ -12,6 +12,8 @@ All of the following limitations are due to the hardware limitations of x86/AMD6
 - **Thread-specific**: Breakpoints can only be applied to existing threads, not to threads created after setting the breakpoint. [^1]
 - **Size restrictions**: Breakpoints can only monitor 1, 2, 4, or 8 bytes of memory, depending on the architecture.
 
+[^1]: You can, however, work around this limitation by hooking `ntdll!Kernel32ThreadInitThunkFunction`, which is called when a thread is created. [Here](https://gist.github.com/imunproductive/77dc16291ac3a03cd2ee1b4472f94fc4) is an example.
+
 ## Usage
 
 First things first, you need to initialize the library:
