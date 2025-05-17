@@ -20,7 +20,7 @@ First things first, you need to initialize the library:
 hwbp::init();
 ```
 
-This will intiialzie the exception handler. However, if you have one already, you can call `dispatch_exception` instead.
+This will initialize the exception handler. However, if you have one already, you can call `dispatch_exception` instead.
 
 Now you need to obtain `Context` from current thread:
 
