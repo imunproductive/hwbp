@@ -34,5 +34,10 @@ pub fn main() {
         TRIGGERED.load(std::sync::atomic::Ordering::Relaxed)
     );
 
+    // Output:
+    // callback
+    // x = 69
+    // triggered = 1
+
     hwbp::free();
 }
