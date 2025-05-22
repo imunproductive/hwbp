@@ -1,5 +1,5 @@
+use hwbp::windows::CONTEXT;
 use hwbp::Context;
-use windows::Win32::System::Diagnostics::Debug::CONTEXT;
 
 #[inline(never)]
 extern "system" fn test_method(num: u32) {

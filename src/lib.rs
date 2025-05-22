@@ -4,7 +4,6 @@ mod hwbp;
 mod hwbp_builder;
 mod hwbp_slot;
 mod types;
-use ::windows::Win32::System::Diagnostics::Debug::EXCEPTION_POINTERS;
 pub use context::Context;
 pub use error::{BuilderError, ContextError};
 pub use hwbp::{HWBPCallback, HWBP};
@@ -12,10 +11,12 @@ pub use hwbp_builder::HWBPBuilder;
 pub(crate) use hwbp_slot::HWBPSlot;
 pub use types::*;
 
+pub mod windows;
+use windows::EXCEPTION_POINTERS;
+
 mod callbacks;
 mod handler;
 mod threads;
-mod windows;
 mod x86;
 
 /// Initializes the library.
