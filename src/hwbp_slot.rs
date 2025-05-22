@@ -1,5 +1,7 @@
-use crate::types::{Condition, Index, Size};
-use crate::x86::DR7;
+use crate::{
+    types::{Condition, Index, Size},
+    x86::DR7,
+};
 
 #[derive(Copy, Clone, Debug, Eq, PartialEq)]
 pub(crate) struct HWBPSlot {

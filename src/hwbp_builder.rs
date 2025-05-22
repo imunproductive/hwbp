@@ -1,5 +1,4 @@
-use crate::{BuilderError, Index};
-use crate::{Condition, Context, HWBPCallback, HWBPSlot, Size, HWBP};
+use crate::{BuilderError, Condition, Context, HWBPCallback, HWBPSlot, Index, Size, HWBP};
 
 pub type Result<T> = std::result::Result<T, BuilderError>;
 

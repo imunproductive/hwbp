@@ -1,8 +1,4 @@
-use crate::callbacks;
-use crate::types::Index;
-use crate::x86::DR7;
-use crate::HWBPSlot;
-use windows::Win32::System::Diagnostics::Debug::CONTEXT;
+use crate::{callbacks, types::Index, windows::CONTEXT, x86::DR7, HWBPSlot};
 
 /// A callback that is called when the hardware breakpoint is hit.
 pub type HWBPCallback = fn(&mut CONTEXT);

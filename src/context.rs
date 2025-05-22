@@ -1,9 +1,7 @@
 use windows::Win32::{
     Foundation::{CloseHandle, HANDLE},
     System::{
-        Diagnostics::Debug::{
-            GetThreadContext, SetThreadContext, CONTEXT, CONTEXT_DEBUG_REGISTERS_AMD64,
-        },
+        Diagnostics::Debug::{GetThreadContext, SetThreadContext, CONTEXT_DEBUG_REGISTERS_AMD64},
         Threading::{
             GetCurrentThread, GetCurrentThreadId, GetThreadId, OpenThread, THREAD_GET_CONTEXT,
             THREAD_SET_CONTEXT,
@@ -11,11 +9,12 @@ use windows::Win32::{
     },
 };
 
-use crate::{callbacks, threads};
-use crate::{windows::AlignedContext, HWBPBuilder};
-use crate::{x86::DR7, Index};
-use crate::{ContextError, HWBPSlot};
-use crate::{HWBPCallback, HWBP};
+use crate::{
+    callbacks, threads,
+    windows::{AlignedContext, CONTEXT},
+    x86::DR7,
+    ContextError, HWBPBuilder, HWBPCallback, HWBPSlot, Index, HWBP,
+};
 
 pub type Result<T> = std::result::Result<T, ContextError>;
 
